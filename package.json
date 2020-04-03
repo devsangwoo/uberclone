@@ -1,0 +1,19 @@
+{
+  "name": "nuber-server",
+  "version": "1.0.0",
+  "description": "server for the uber clone",
+  "main": "index.js",
+  "repository": "https://github.com/devsangwoo/uberclone",
+  "author": "sangwoo <dev.sangwoo@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.11.0",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.8.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
+  }
+}
