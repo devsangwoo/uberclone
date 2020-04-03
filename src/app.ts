@@ -1,5 +1,5 @@
-import { GraphQLServer } from 'graphql-yoga';
 import cors from 'cors';
+import { GraphQLServer } from 'graphql-yoga';
 import helmet from 'helmet';
 import logger from 'morgan';
 
@@ -11,7 +11,9 @@ class App {
   }
   private middlewares = (): void => {
     this.app.express.use(cors());
+    this.app.express.use(logger('dev'));
     this.app.express.use(helmet());
-    this.app.express.use(logger());
   };
 }
+
+export default new App().app;
